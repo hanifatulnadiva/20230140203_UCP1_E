@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>SkyByte - Video Pelajaran</title>
+  <style>
+    #videoContainer {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Selamat Datang di SkyByte</h1>
+
+  <!-- Tombol untuk menampilkan video -->
+  <button onclick="tampilkanVideo()">Tonton Video Pelajaran</button>
+
+  <!-- Kontainer video (awalnya disembunyikan) -->
+  <div id="videoContainer">
+    <h2>Video Pelajaran: Dasar HTML</h2>
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="Video Pelajaran" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    function tampilkanVideo() {
+      document.getElementById("videoContainer").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

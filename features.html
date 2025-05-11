@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitur - SkyByte</title>
+  <style>
+      :root {
+    --primary: #89A8B2;
+    --secondary: #B3C8CF;
+    --accent: #E5E1DA;
+    --background: #F1F0E8;
+    --text: #34474e;
+    --white: #ffffff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  /* Navbar */
+  nav {
+    background-color: var(--primary);
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: var(--accent);
+  }
+
+  /* Gallery Section */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+    background-color: var(--secondary);
+  }
+
+  .feature-box {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-box img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .feature-box h3 {
+    margin: 10px 0 5px;
+    color: var(--text);
+  }
+
+  /* Video Section */
+  .video-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--accent);
+  }
+
+  .video-section h2 {
+    color: var(--text);
+    font-size: 24px;
+  }
+
+  .video-section iframe {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 700px;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .feature-box {
+      width: 90%;
+    }
+
+    .video-section iframe {
+      height: 250px;
+    }
+  }
+
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Fitur</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <section class="gallery">
+    <div class="feature-box">
+      <img src="aset/materi.jpg" alt="materi">
+      <h3>Materi</h3>
+      <p>Belajar bahasa pemrograman populer secara terstruktur dan menyenangkan.</p>
+    </div>
+    <div class="feature-box">
+      <img src="aset/quiz.jpg" alt="Quiz">
+      <h3>Quiz</h3>
+      <p>Uji pengetahuan Anda setelah mempelajari materi untuk meningkatkan pemahaman.</p>
+    </div>
+    <div class="feature-box">
+      <img src="aset/vidio.jpg" alt="Video Pembelajaran">
+      <h3>Video Pembelajaran</h3>
+      <p>Video berkualitas tinggi untuk memperkuat pemahaman konsep dan praktik.</p>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>Contoh Materi Video</h2>
+    <iframe src="https://www.youtube.com/embed/-vdSPjF3A8Q" allowfullscreen></iframe>
+  </section>
+
+</body>
+</html>

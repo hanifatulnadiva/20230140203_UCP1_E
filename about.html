@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - SkyByte</title>
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Fitur</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popupOverlay"></div>
+  <div class="popup" id="popupBox">
+    <h3>🎉 Promo Spesial!</h3>
+    <p>Dapatkan diskon 30% untuk semua kursus coding sampai 31 Mei!</p>
+    <button onclick="closePopup()">Tutup</button>
+  </div>
+
+  <header>
+    <h1>Tentang SkyByte</h1>
+  </header>
+
+  <section class="intro">
+    <h2>Visi & Misi</h2>
+    <p><strong>Visi:</strong> Menjadi platform pembelajaran coding terdepan yang mudah diakses oleh semua kalangan.</p>
+    <p><strong>Misi:</strong></p>
+    <ul>
+      <li>Menyediakan materi belajar interaktif dan menyenangkan</li>
+      <li>Mendukung perkembangan karier melalui proyek dan pelatihan</li>
+      <li>Membangun komunitas belajar yang suportif</li>
+    </ul>
+  </section>
+
+  <section class="team">
+    <h2>Tim Kami</h2>
+    <p>Kami adalah tim muda yang antusias dalam dunia teknologi dan pendidikan. SkyByte dibangun oleh para pengembang, desainer, dan pendidik yang ingin menciptakan solusi belajar coding yang efisien dan menyenangkan.</p>
+  </section>
+
+  <section class="comparison">
+    <h2>Keunggulan Produk Kami</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fitur</th>
+          <th>SkyByte</th>
+          <th>Kompetitor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tutorial Interaktif</td>
+          <td>Tersedia</td>
+          <td>Tidak Tersedia</td>
+        </tr>
+        <tr>
+          <td>Proyek Coding Nyata</td>
+          <td>Tersedia</td>
+          <td>Tidak Tersedia</td>
+        </tr>
+        <tr>
+          <td>Dukungan Komunitas</td>
+          <td>Tersedia</td>
+          <td>Tersedia</td>
+        </tr>
+        <tr>
+          <td>Akses Gratis</td>
+          <td>Tersedia</td>
+          <td>Tidak Tersedia</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    // Tampilkan popup setelah 1.5 detik
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById("popupOverlay").style.display = "block";
+        document.getElementById("popupBox").style.display = "block";
+      }, 1500);
+    }
+
+    // Fungsi untuk menutup popup
+    function closePopup() {
+      document.getElementById("popupOverlay").style.display = "none";
+      document.getElementById("popupBox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

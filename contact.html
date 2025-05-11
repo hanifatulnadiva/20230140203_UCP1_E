@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #89A8B2;
+      color: #34474e;
+    }
+     /* Navbar CSS */
+    nav {
+      background-color: #789ca8;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #34474e;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        text-align: left;
+      }
+
+      nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .left-info {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+    }
+
+    .left-info h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #34474e;
+    }
+
+    .info-group {
+      margin-bottom: 20px;
+    }
+
+    .info-group i {
+      margin-right: 10px;
+      font-size: 18px;
+      color: #34474e;
+    }
+
+    .left-info p {
+      margin: 5px 0;
+      color:#34474e;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      background-color: #e5f1f5;
+      padding: 12px;
+      border-radius: 50%;
+      color: rgb(9, 62, 123);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      background-color: #B3C8CF;
+      color: #165fa0;
+    }
+
+    .contact-form {
+      flex: 2;
+      background: #B3C8CF;
+      padding: 30px;
+      border-radius: 15px;
+      min-width: 300px;
+    }
+
+    .contact-form h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #34474e;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      background: #E5E1DA;
+      border: 1px solid #89A8B2;
+      border-radius: 8px;
+      color: #34474e;
+      font-size: 14px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #34474e;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #F1F0E8 ;
+      border: none;
+      border-radius: 8px;
+      color: #34474e;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #73929b;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Fitur</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Left Contact Info -->
+    <div class="left-info">
+      <div class="info-group">
+        <h3><i class="fas fa-envelope"></i> MAIL US</h3>
+        <p>info.skyByte@gmail.com</p>
+      </div>
+      <div class="info-group">
+        <h3><i class="fas fa-phone"></i> CONTACT US</h3>
+        <p>+62 838-9673-5071</p>
+      </div>
+      <div class="info-group">
+        <h3><i class="fas fa-map-marker-alt"></i> LOCATION</h3>
+        <p>Jalan Diponegoro no 70,<br>Yogyakarta</p>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Right Contact Form -->
+    <div class="contact-form">
+      <h2>Get In Touch</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Name *" required>
+        <input type="email" name="email" placeholder="Email *" required>
+        <input type="text" name="subject" placeholder="Your Subject *" required>
+        <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Pesan anda terkirim");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

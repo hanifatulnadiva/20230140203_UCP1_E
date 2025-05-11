@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>skyByte</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Fitur</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Selamat Datang di Website <span class="brand">skyByte</span></h1>
+    <p class="description">
+      <strong>skyByte</strong> adalah platform digital yang dirancang untuk membantu individu dan bisnis mengelola data serta layanan berbasis cloud dengan mudah dan efisien. Dengan antarmuka yang ramah pengguna dan fitur canggih, skyByte menjadi solusi andal untuk kebutuhan teknologi Anda.
+    </p>
+  </main>
+
+  <!-- Popup -->
+  <div id="popupOverlay" class="popup-overlay">
+    <div id="popupBox" class="popup-box">
+      <p>Selamat datang di skyByte! Nikmati pengalaman terbaik Anda di sini.</p>
+      <button onclick="closePopup()">Tutup</button>
+    </div>
+  </div>
+
+  <script>
+    // Tampilkan popup setelah 1.5 detik
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById("popupOverlay").style.display = "block";
+        document.getElementById("popupBox").style.display = "block";
+      }, 1500);
+    }
+
+    // Fungsi untuk menutup popup
+    function closePopup() {
+      document.getElementById("popupOverlay").style.display = "none";
+      document.getElementById("popupBox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
